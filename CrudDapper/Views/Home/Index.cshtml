@@ -1,0 +1,65 @@
+﻿@model IEnumerable<CrudDapper.Models.Mobiledata>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <p>
+        @Html.ActionLink("Create New", "Create")
+    </p>
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.MobileID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MobileName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MobileIMEno)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.MobileManufactured)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Mobileprice)
+            </th>
+            <th></th>
+        </tr>
+    
+    @foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.MobileID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MobileName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MobileIMEno)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.MobileManufactured)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Mobileprice)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new {  id=item.MobileID  }) |
+                @Html.ActionLink("Details", "Details", new {  id=item.MobileID}) |
+                @Html.ActionLink("Delete", "Delete", new {  id=item.MobileID  })
+            </td>
+        </tr>
+    }
+    
+    </table>
+</body>
+</html>

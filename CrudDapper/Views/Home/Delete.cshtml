@@ -1,0 +1,72 @@
+﻿@model CrudDapper.Models.Mobiledata
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Delete</title>
+</head>
+<body>
+    <h3>Are you sure you want to delete this?</h3>
+    <div>
+        <h4>Mobiledata</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.MobileID)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MobileID)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MobileName)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MobileName)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MobileIMEno)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MobileIMEno)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.MobileManufactured)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.MobileManufactured)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Mobileprice)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Mobileprice)
+            </dd>
+    
+        </dl>
+    
+        @using (Html.BeginForm()) {
+           
+    
+            <div class="form-actions no-color">
+                <input type="submit" value="Delete" class="btn btn-default" /> |
+                @Html.ActionLink("Back to List", "Index")
+            </div>
+        }
+    </div>
+</body>
+</html>
